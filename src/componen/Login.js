@@ -7,6 +7,8 @@ function Login(){
     const [username,setUsername] = useState('');
     const [password,setPassword] = useState('');
     const navigate = useNavigate();
+
+    //function login
     const auth = async(e)=>{
         e.preventDefault();
 
@@ -24,7 +26,8 @@ function Login(){
             if (response.status === 'success') {
                 console.log('succes');
                 sessionStorage.setItem('token',response.token);
-                sessionStorage.setItem('username',response.username);
+                sessionStorage.setItem('username',username);
+                sessionStorage.setItem('role',response.role);
                 navigate('/dashboard');
             }else{
                 alert('eror')

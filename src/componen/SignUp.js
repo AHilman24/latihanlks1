@@ -8,6 +8,7 @@ function SignUp(){
 
     const navigate = useNavigate();
 
+    //function signup
     const signup= async(e)=>{
         e.preventDefault();
 
